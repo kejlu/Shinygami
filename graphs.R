@@ -15,7 +15,7 @@ theme_set(theme_bw())
 # Apple region revenue
 p_region_rev <- ggplot(data = countries_rev2, aes(x = Y_Q, y = Rev, color = Region, group = Region, frame = Year)) + 
   geom_point(size = 4) + 
-  geom_line() + theme(axis.text.x = element_text(angle = 30, hjust = 1)) +
+  geom_line() + theme(axis.text.x=element_blank()) +
   xlab('Quarters') + ylab('Revenue (USD in millions)') + ggtitle('Apple Worldwide Revenue 2010 - 2016')
   #scale_x_continuous(breaks = round(seq(min(dat$x), max(dat$x), by = 0.5),1)) +
   scale_y_continuous(limits = c(0, 35000), breaks = round(seq(min(countries_rev2$Rev), max(countries_rev2$Rev), by = 2000),1))
